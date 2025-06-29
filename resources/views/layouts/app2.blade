@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config('app.name', 'My Portfolio') }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Include CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="header-left">
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search projects...">
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="header-icon">
+                <i class="fas fa-envelope"></i>
+                <span class="badge">3</span>
+            </div>
+            <div class="header-icon">
+                <i class="fas fa-bell"></i>
+                <span class="badge">5</span>
+            </div>
+            <div class="user-profile user-dropdown" id="userDropdown">
+                <div class="user-avatar" style="background-image: url('{{ asset('assets/images/profile.jpg') }}');"></div>
+                <span class="user-name">{{ Auth::user()->name ?? 'Guest' }}</span>
+                <i class="fas fa-chevron-down"></i>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="{{ route('profile') }}" class="dropdown-item">
+                        <i class="fas fa-user mr-2"></i> My Profile
+                    </a>
+                    <a href="{{ route('settings') }}" class="dropdown-item">
+                        <i class="fas fa-cog mr-2"></i> Settings
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="{{ route('logout') }}" class="dropdown-item">
+                        <i class="fas fa-sign-out-alt mr-2"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-user-circle fa-2x"></i>
+                <h3>My Portfolio</h3>
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-category">Main</div>
+                <a href="{{ route('dashboard') }}" class="menu-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                    <i class="fas fa-home"></i>
+                    <span class="menu-text">Dashboard</span>
+                </a>
+                
+                <div class="menu-category">Portfolio</div>
+                <div class="menu-item has-submenu" id="projectsMenu">
+                    <i class="fas fa-code"></i>
+                    <span class="menu-text">Projects</span>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="submenu" id="projectsSubmenu">
+                    <a href="{{ route('projects.index') }}" class="menu-item {{ request()->routeIs('projects.index') ? 'active' : '' }}">
+                        <i class="fas fa-list"></i>
+                        <span class="menu-text">All Projects</span>
+                    </a>
+                    <a href="{{ route('projects.create') }}" class="menu-item {{ request()->routeIs('projects.create') ? 'active' : '' }}">
+                        <i class="fas fa-plus"></i>
+                        <span class="menu-text">Add Project</span>
+                    </a>
+                    <a href="{{ route('projects.categories') }}" class="menu-item {{ request()->routeIs('projects.categories') ? 'active' : '' }}">
+                        <i class="fas fa-tags"></i>
+                        <span class="menu-text">Categories</span>
+                    </a>
+                </div>
+                
+                <a href="{{ route('skills.index') }}" class="menu-item {{ request()->routeIs('skills.index') ? 'active' : '' }}">
+                    <i class="fas fa-lightbulb"></i>
+                    <span class="menu-text">Skills</span>
+                </a>
+                
+                <div class="menu-item has-submenu" id="contentMenu">
+                    <i class="fas fa-file-alt"></i>
+                    <span class="menu-text">Content</span>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="submenu" id="contentSubmenu">
+                    <a href="{{ route('blog.index') }}" class="menu-item {{ request()->routeIs('blog.index') ? 'active' : '' }}">
+                        <i class="fas fa-blog"></i>
+                        <span class="menu-text">Blog Posts</span>
+                    </a>
+                    <a href="{{ route('testimonials.index') }}" class="menu-item {{ request()->routeIs('testimonials.index') ? 'active' : '' }}">
+                        <i class="fas fa-quote-left"></i>
+                        <span class="menu-text">Testimonials</span>
+                    </a>
+                    <a href="{{ route('media.index') }}" class="menu-item {{ request()->routeIs('media.index') ? 'active' : '' }}">
+                        <i class="fas fa-images"></i>
+                        <span class="menu-text">Media Gallery</span>
+                    </a>
+                </div>
+                
+                <div class="menu-category">Engagement</div>
+                <a href="{{ route('messages.index') }}" class="menu-item {{ request()->routeIs('messages.index') ? 'active' : '' }}">
+                    <i class="fas fa-comments"></i>
+                    <span class="menu-text">Messages</span>
+                    <span class="badge">5</span>
+                </a>
+                <a href="{{ route('contacts.index') }}" class="menu-item {{ request()->routeIs('contacts.index') ? 'active' : '' }}">
+                    <i class="fas fa-address-book"></i>
+                    <span class="menu-text">Contacts</span>
+                </a>
+                <a href="{{ route('subscribers.index') }}" class="menu-item {{ request()->routeIs('subscribers.index') ? 'active' : '' }}">
+                    <i class="fas fa-users"></i>
+                    <span class="menu-text">Subscribers</span>
+                </a>
+                
+                <div class="menu-category">Settings</div>
+                <a href="{{ route('settings') }}" class="menu-item {{ request()->routeIs('settings') ? 'active' : '' }}">
+                    <i class="fas fa-cog"></i>
+                    <span class="menu-text">General Settings</span>
+                </a>
+                <a href="{{ route('seo.index') }}" class="menu-item {{ request()->routeIs('seo.index') ? 'active' : '' }}">
+                    <i class="fas fa-search"></i>
+                    <span class="menu-text">SEO Settings</span>
+                </a>
+                <a href="{{ route('analytics') }}" class="menu-item {{ request()->routeIs('analytics') ? 'active' : '' }}">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="menu-text">Analytics</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-content" id="mainContent">
+            <main>
+                @yield('content')
+            </main>
+        </div>
+    </div>
+
+    <!-- Include JS -->
+    <script src="{{ asset('assets/js/script.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+            <li class="mobile-item {{ request()->routeIs('about') ? 'active' : '' }}">
+                <a href="{{ route('about') }}" class="mobile-link">
+                    <i class="fas fa-code "></i>
+                    <span>Web Development</span>
+                </a>
+            <li class="mobile-item {{ request()->routeIs('about') ? 'active' : '' }}">
+                <a href="{{ route('about') }}" class="mobile-link">
+                    <i class="fas fa-server"></i>
+                    <span>System Development</span>
+                </a>
+            <li class="mobile-item {{ request()->routeIs('about') ? 'active' : '' }}">
+                <a href="{{ route('about') }}" class="mobile-link">
+                    <i class="fas fa-palette"></i>
+                    <span>Graphic Design </span>
+                </a>
+            <li class="mobile-item {{ request()->routeIs('about') ? 'active' : '' }}">
+                <a href="{{ route('about') }}" class="mobile-link">
+                    <i class="fas fa-print"></i>
+                    <span>Stationery Services</span>
+                </a>
+            <li class="mobile-item {{ request()->routeIs('about') ? 'active' : '' }}">
+                <a href="{{ route('about') }}" class="mobile-link">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Mobile Apps</span>
+                </a>
+            </li>
+            <li class="mobile-item {{ request()->routeIs('about') ? 'active' : '' }}">
+                <a href="{{ route('about') }}" class="mobile-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>E-Commerce Solutions</span>
+                </a>
+            </li>
