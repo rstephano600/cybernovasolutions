@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.web-app')
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
@@ -53,6 +53,17 @@
                 </div>
                 <h3 class="service-name">System Development</h3>
                 <p class="service-description">Tailored software solutions that streamline operations and boost productivity.</p>
+                <a href="{{ route('system') }}#system-development" class="service-link">
+                    Learn more <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-preview">
+                <div class="service-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3 class="service-name">Mobile applications Dev</h3>
+                <p class="service-description">Tailored Mobile app's solutions that streamline operations and boost productivity.</p>
                 <a href="{{ route('system') }}#system-development" class="service-link">
                     Learn more <i class="fas fa-arrow-right"></i>
                 </a>
@@ -234,7 +245,7 @@
 
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section">
+    <section class="testimonials-section" style="display:none">
         <h2 class="section-title">Client Testimonials</h2>
         <div class="testimonial-grid">
             <!-- Testimonial 1 -->

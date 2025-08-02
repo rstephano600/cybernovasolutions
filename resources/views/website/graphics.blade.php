@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.web-app')
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('assets/css/services.css') }}">
 
 <!-- Hero Section -->
-<section class="py-5 bg-gradient-primary text-white">
+<section class="py-5 bg-gradient-primary text-dark">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">

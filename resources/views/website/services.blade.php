@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.web-app')
 
     <title>Our Services | {{ config('app.name', 'Creative Solutions') }}</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">

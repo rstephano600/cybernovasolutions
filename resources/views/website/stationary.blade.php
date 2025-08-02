@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.web-app')
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('assets/css/services.css') }}">
 
 <!-- Hero Section -->
-<section class="py-5 bg-gradient-secondary text-white">
+<section class="py-5 bg-gradient-secondary text-dark">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
@@ -325,7 +325,7 @@
 </section>
 
 <!-- Portfolio Section -->
-<section class="py-5 bg-light">
+<section class="py-5 bg-light" style="display:none">
     <div class="container py-4">
         <div class="text-center mb-5">
             <h2 class="fw-bold">Stationery Portfolio</h2>
@@ -383,7 +383,7 @@
 </section>
 
 <!-- Pricing Section -->
-<section class="py-5">
+<section class="py-5" style="display:none">
     <div class="container py-4">
         <div class="text-center mb-5">
             <h2 class="fw-bold">Pricing Packages</h2>

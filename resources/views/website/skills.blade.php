@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.web-app')
 
     <title>Our Services | {{ config('app.name', 'Creative Solutions') }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -125,34 +125,110 @@
 
         <!-- Graphic Design Services -->
         <div class="service-category">
-            <h2><i class="fas fa-palette"></i> Graphic Design</h2>
-            <div class="service-grid">
-                <!-- Service Cards for Graphic Design -->
-                <div class="service-card">
-                    <div class="service-card-header" style="background-image: url('https://images.unsplash.com/photo-1613909207039-6b173b755cc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80')">
-                        <div class="service-card-icon">
-                            <i class="fas fa-brush"></i>
-                        </div>
-                        <h3 class="service-card-title">Brand Identity Design</h3>
-                    </div>
-                    <div class="service-card-body">
-                        <p>Complete visual identity packages to establish your brand in the market.</p>
-                        <ul class="service-features">
-                            <li>Logo design</li>
-                            <li>Color palette</li>
-                            <li>Typography system</li>
-                            <li>Brand guidelines</li>
-                            <li>Stationery design</li>
-                        </ul>
-                        <div class="service-cta">
-                            <!-- <div class="price-tag">$800+ <span>package</span></div> -->
-                            <button class="btn-service">Get Started</button>
-                        </div>
-                    </div>
+    <h2><i class="fas fa-palette"></i> Graphic Design</h2>
+    <div class="service-grid">
+        
+        <!-- 1. Brand Identity Design (Tanzania-Focused) -->
+        <div class="service-card">
+            <div class="service-card-header" style="background-image: url('https://images.unsplash.com/photo-1613909207039-6b173b755cc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80')">
+                <div class="service-card-icon">
+                    <i class="fas fa-brush"></i>
                 </div>
-                <!-- Add more graphic design services here -->
+                <h3 class="service-card-title">Brand Identity Design</h3>
+            </div>
+            <div class="service-card-body">
+                <p><strong>For Tanzanian businesses:</strong> Create a unique brand that stands out in Dar es Salaam, Arusha, Mwanza & beyond.</p>
+                <ul class="service-features">
+                    <li><strong>Logo design</strong> (Swahili-inspired, modern, or traditional)</li>
+                    <li><strong>Color palette</strong> (aligned with Tanzanian culture & market trends)</li>
+                    <li><strong>Typography system</strong> (English & Swahili-friendly fonts)</li>
+                    <li><strong>Brand guidelines</strong> (for consistent use across print & digital)</li>
+                    <li><strong>Stationery design</strong> (business cards, letterheads, envelopes)</li>
+                    <li><strong>Social media branding</strong> (profile banners, post templates)</li>
+                </ul>
+                <div class="service-cta">
+                    <!-- <div class="price-tag">TZS 1,500,000+ <span>(Full Package)</span></div> -->
+                    <button class="btn-service">Get Started</button>
+                </div>
             </div>
         </div>
+
+        <!-- 2. Print & Advertising Design (Tanzania-Specific) -->
+        <div class="service-card">
+            <div class="service-card-header" style="background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')">
+                <div class="service-card-icon">
+                    <i class="fas fa-print"></i>
+                </div>
+                <h3 class="service-card-title">Print & Advertising Design</h3>
+            </div>
+            <div class="service-card-body">
+                <p><strong>High-impact designs</strong> for billboards, flyers, posters, and magazines in Tanzania.</p>
+                <ul class="service-features">
+                    <li><strong>Billboard ads</strong> (strategic for Dar es Salaam highways)</li>
+                    <li><strong>Flyer & brochure design</strong> (for events, shops, promotions)</li>
+                    <li><strong>Newspaper & magazine ads</strong> (The Citizen, Mwananchi, etc.)</li>
+                    <li><strong>Product packaging</strong> (locally appealing designs)</li>
+                    <li><strong>Vehicle branding</strong> (boda-boda, bajaji, company cars)</li>
+                    <li><strong>Shop signage & banners</strong> (Swahili & English options)</li>
+                </ul>
+                <div class="service-cta">
+                    <!-- <div class="price-tag">From TZS 300,000 <span>(per design)</span></div> -->
+                    <button class="btn-service">Get Started</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Digital & Social Media Graphics (Tanzania Market) -->
+        <div class="service-card">
+            <div class="service-card-header" style="background-image: url('https://images.unsplash.com/photo-1611162617213-6d7a0a9f0b8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80')">
+                <div class="service-card-icon">
+                    <i class="fas fa-hashtag"></i>
+                </div>
+                <h3 class="service-card-title">Digital & Social Media Graphics</h3>
+            </div>
+            <div class="service-card-body">
+                <p><strong>Eye-catching visuals</strong> for Instagram, Facebook, TikTok & WhatsApp marketing in Tanzania.</p>
+                <ul class="service-features">
+                    <li><strong>Social media posts</strong> (trending Tanzanian styles)</li>
+                    <li><strong>YouTube thumbnails & banners</strong></li>
+                    <li><strong>WhatsApp status & flyers</strong> (for local promotions)</li>
+                    <li><strong>Animated ads (GIFs)</strong> (for better engagement)</li>
+                    <li><strong>Email newsletter designs</strong></li>
+                    <li><strong>E-commerce product images</strong> (Jumia, Masoko, Kilimall)</li>
+                </ul>
+                <div class="service-cta">
+                    <!-- <div class="price-tag">From TZS 200,000 <span>(per project)</span></div> -->
+                    <button class="btn-service">Get Started</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Custom Illustrations & Art (Tanzanian Themes) -->
+        <div class="service-card">
+            <div class="service-card-header" style="background-image: url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80')">
+                <div class="service-card-icon">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <h3 class="service-card-title">Custom Illustrations & Art</h3>
+            </div>
+            <div class="service-card-body">
+                <p><strong>Unique hand-drawn & digital art</strong> inspired by Tanzanian culture, wildlife, and landscapes.</p>
+                <ul class="service-features">
+                    <li><strong>Book & magazine illustrations</strong></li>
+                    <li><strong>Character design</strong> (for animations & branding)</li>
+                    <li><strong>Traditional Tingatinga-style art</strong> (digital adaptation)</li>
+                    <li><strong>Wall murals & decor</strong> (for cafes, offices, homes)</li>
+                    <li><strong>NFT & digital art</strong> (for global & local markets)</li>
+                    <li><strong>Custom portraits</strong> (for gifts & personal branding)</li>
+                </ul>
+                <div class="service-cta">
+                    <!-- <div class="price-tag">From TZS 500,000 <span>(per artwork)</span></div> -->
+                    <button class="btn-service">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
         <!-- Stationery Services -->
         <div class="service-category">
@@ -184,27 +260,80 @@
                 <!-- Add more stationery services here -->
             </div>
         </div>
-    </div>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-grid">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    "The web application they developed transformed our business operations. The team was professional, met all deadlines, and delivered beyond our expectations."
+        <div class="service-category">
+    <h2><i class="fas fa-mobile-alt"></i> Mobile Application Development</h2>
+    <div class="service-grid">
+        <!-- Service Cards for Mobile Development -->
+        <div class="service-card">
+            <div class="service-card-header" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')">
+                <div class="service-card-icon">
+                    <i class="fas fa-apple"></i>
                 </div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg')"></div>
-                    <div class="author-info">
-                        <h4>Michael Johnson</h4>
-                        <p>CEO, TechSolutions Inc.</p>
-                    </div>
+                <h3 class="service-card-title">iOS App Development</h3>
+            </div>
+            <div class="service-card-body">
+                <p>Premium native iOS applications built with Swift for optimal performance.</p>
+                <ul class="service-features">
+                    <li>SwiftUI or UIKit development</li>
+                    <li>App Store optimization</li>
+                    <li>iPhone & iPad compatibility</li>
+                    <li>Apple Watch integration</li>
+                    <li>In-app purchase setup</li>
+                </ul>
+                <div class="service-cta">
+                    <button class="btn-service">Request Quote</button>
                 </div>
             </div>
+        </div>
 
-    </section>
+        <div class="service-card">
+            <div class="service-card-header" style="background-image: url('https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')">
+                <div class="service-card-icon">
+                    <i class="fab fa-android"></i>
+                </div>
+                <h3 class="service-card-title">Android App Development</h3>
+            </div>
+            <div class="service-card-body">
+                <p>Custom Android applications developed with Kotlin for seamless performance.</p>
+                <ul class="service-features">
+                    <li>Kotlin/Java development</li>
+                    <li>Material Design implementation</li>
+                    <li>Play Store deployment</li>
+                    <li>Device compatibility testing</li>
+                    <li>Google Play billing integration</li>
+                </ul>
+                <div class="service-cta">
+                    <button class="btn-service">Request Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-card-header" style="background-image: url('https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')">
+                <div class="service-card-icon">
+                    <i class="fas fa-mobile"></i>
+                </div>
+                <h3 class="service-card-title">Cross-Platform Development</h3>
+            </div>
+            <div class="service-card-body">
+                <p>Single codebase solutions for both iOS and Android platforms.</p>
+                <ul class="service-features">
+                    <li>Flutter or React Native development</li>
+                    <li>Cost-effective solution</li>
+                    <li>Consistent UI across platforms</li>
+                    <li>Faster development cycle</li>
+                    <li>Native performance optimization</li>
+                </ul>
+                <div class="service-cta">
+                    <button class="btn-service">Request Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
 
     <!-- CTA Section -->
     <section class="cta-section">

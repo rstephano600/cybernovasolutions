@@ -119,6 +119,7 @@
 
         .service-features {
             margin-bottom: 1.5rem;
+            display: none;
         }
 
         .service-features li {
